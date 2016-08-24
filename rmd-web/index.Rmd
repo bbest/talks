@@ -1,0 +1,39 @@
+---
+title: "Authoring Websites with Rmarkdown, Github"
+author: "Ben Best (bdbest@gmail.com)"
+date: '`r format(Sys.time(), "%Y-%m-%d, Santa Barbara R Meetup")` '
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(vembedr)
+```
+
+## Example Websites
+
+* [Environmental Data Scientist](http://benbestphd.com/)
+* [Marine Biodiversity Observation Network](https://marinebon.github.io/)
+
+## R Markdown
+
+```{r}
+embed_vimeo('178485416')
+```
+
+## R Markdown Websites
+
+* [R Markdown Websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html)
+
+## Publishing to Github
+
+Use **Github Pages** as free web hosting service. Can change domain to choice.
+
+* [GitHub Pages - Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.](https://pages.github.com/)
+* [Bookdown: Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/github.html)
+
+## Continuous Integration
+
+Simply edit markdown (even with web browser on Github), and site will rebuild (within 10 min).
+
+* [Bookdown: Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/github.html)
