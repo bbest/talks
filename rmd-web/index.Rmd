@@ -34,6 +34,68 @@ Use **Github Pages** as free web hosting service. Can change domain to choice.
 
 ## Continuous Integration
 
+- see [autogenerate rmd to html on marinebon.github.io (using Travis-CI) · Issue #21 · marinebon/private](https://github.com/marinebon/private/issues/21)
+
 Simply edit markdown (even with web browser on Github), and site will rebuild (within 10 min).
 
 * [Bookdown: Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/github.html)
+* [R on Travis-CI | RStudio Blog](https://blog.rstudio.org/2016/03/09/r-on-travis-ci/)
+
+steps to get travis to push updated github html files:
+
+- create `.travis.yml`
+
+```yaml
+
+```
+
+- Since this Travis service is primarily for checking R packages, you will also need a (fake) DESCRIPTION file as if the book repository were an R package.
+
+- create personal access token in Github w/ repo privileges
+- 
+
+- [R on Travis-CI | RStudio Blog](https://blog.rstudio.org/2016/03/09/r-on-travis-ci/)
+
+```bash
+GH_OWNER=marinebon
+GH_REPO=marinebon.github.io
+GH_BRANCH=master
+GH_TOKEN=86a38df63e8f344c4c595d3e76a060f0dff3FAKE
+DIR=~/github
+
+GH_SLUG=$GH_OWNER/$GH_REPO
+
+cd $DIR/$GH_REPO
+
+travis encrypt -r $GH_SLUG GH_TOKEN=$GH_TOKEN --add env.global
+travis enable -r $GH_SLUG
+
+git commit -am "enabled travis.yml with encrypted github token"
+git pull
+git push
+```
+
+view `~/.github-token_marinebon`
+
+- add repo permissions, per [Travis CI's use of GitHub API Scopes - Travis CI](https://docs.travis-ci.com/user/github-oauth-scopes/)
+
+deploy:
+
+- [happy-git-with-r/_deploy.sh at master · jennybc/happy-git-with-r](https://github.com/jennybc/happy-git-with-r/blob/master/_deploy.sh)
+- [courses/deploy.sh at master · ccfd/courses](https://github.com/ccfd/courses/blob/master/tools/deploy.sh)
+
+
+- [skip ci]
+- add badge
+  - [Embedding Status Images - Travis CI](https://docs.travis-ci.com/user/status-images/)
+
+
+
+# useR
+
+## Jenny Bryan STAT 545 to Bookdown
+
+[Happy Git and GitHub for the useR](http://happygitwithr.com/)
+
+## Duke Teaching Vids
+
