@@ -1,0 +1,61 @@
+---
+title: "Authoring Websites with Rmarkdown onto Github"
+author: "Ben Best (bdbest@gmail.com)"
+date: '`r format(Sys.time(), "%Y-%m-%d, Santa Barbara R Meetup")` '
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(vembedr)
+library(htmltools)
+```
+
+## Motivation
+
+To build a website you usually want the following aspects **consistent** across pages of web content:
+
+- Layout
+- Navigation
+- Style
+
+![](http://i.stack.imgur.com/N1NmR.gif)
+
+## Goal Today
+
+- **Rmarkdown** to build data-driven web pages with tables, plots, etc
+
+    `r img(src='img/rmd_in-out.png', width=200)`
+
+- **Github** to host website for free at http://*.github.io 
+
+    `r img(src='http://dandelion.github.io/slides/dandelion-0.10.0/assets/images/logo_github_small.gif', width=200)`
+
+## Limitations to Rmarkdown Website
+
+- **Files** All \*.Rmd (-> \*.html)need to be in root directory (no subdirectories)
+- **Crude** Not as pretty as wix or squarespace, but just "static" web content (HTML, CSS, JS) so updatable.
+
+    `r img(src='img/wix.png')`
+
+## Example Websites
+
+* <https://marinebon.github.io>
+* <http://benbestphd.com>
+
+## What is Rmarkdown?
+
+```{r}
+embed_vimeo('178485416')
+```
+
+## Demo
+
+- Github
+    - Create organization **sb-r-users**
+    - Create repository **sb-r-users.github.io**
+- RStudio
+    - Clone repository locally
+    - Create [Rmarkdown website](http://rmarkdown.rstudio.com)
+    - Push to Github
+- View at <http://sb-r-users.github.io>
