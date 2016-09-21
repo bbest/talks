@@ -33,8 +33,14 @@ To build a website you usually want the following aspects **consistent** across 
 
 ## Limitations to Rmarkdown Website
 
-- **Files** All \*.Rmd (-> \*.html)need to be in root directory (no subdirectories)
-- **Crude** Not as pretty as wix or squarespace, but just "static" web content (HTML, CSS, JS) so updatable.
+- **Subfolders** 
+
+    All \*.Rmd (-> \*.html) need to be in root directory (no subdirectories)
+    
+- **Style** 
+
+    "Out of the box" not as pretty as Wix or Squarespace, but just "static" web content (HTML, CSS, JS) so updatable
+    
 
     `r img(src='img/wix.png')`
 
