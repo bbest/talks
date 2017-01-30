@@ -6,3 +6,7 @@
 * [Ten Simple Rules for Creating a Good Data Management Plan](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525)
 * [Ten Simple Rules for Effective Statistical Practice](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004961)
 * [Toward the Geoscience Paper of the Future: Best practices for documenting and sharing research from data to software to provenance - Gil - 2016 - Earth and Space Science - Wiley Online Library](http://onlinelibrary.wiley.com/doi/10.1002/2015EA000136/full)
+
+## Next Time
+- emphasize revolution in **readability** of code with tidyverse example (vs base R or SQL)
+- emphasize revolution in **htmlwidgets** porting incredible JS visulization libraries (us d3 or descendents) to data via R
